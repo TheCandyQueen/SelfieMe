@@ -21,14 +21,14 @@ recognition.onresult = function run (event) {
 
 function speak(){
     var synth = window.speechSynthesis;
-    speak_data = "Taking your selfie in 5 seconds";
+    speak_data = "Taking your selfie in 3 seconds";
     var utterThis = new SpeechSynthesisUtterance(speak_data);
     synth.speak(utterThis);
     Webcam.attach(camera);
     setTimeout(function() {
         take_snapshot();
         save();
-    }, 5000);
+    }, 2000);
 }
 
 Webcam.set({
